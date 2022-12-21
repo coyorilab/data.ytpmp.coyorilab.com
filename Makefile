@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: out/ytpmp.pages.dev/data.json out/sing.sakamata.ch/data.json out/ytpmp.coyorilab.com/data.json
+all: out/ytpmp.pages.dev/data.json out/sing.sakamata.ch/data.json
 
 out/ytpmp.pages.dev/data.json: ytpmp.pages.dev/items.yaml
 	cd ytpmp.pages.dev; \
