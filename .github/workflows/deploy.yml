@@ -1,4 +1,4 @@
-name: Makefile CI
+name: Deploy
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           username: ${{ secrets.CDNET_BLOB01_USER }}
-          server: ${{ secretts.CDNET_BLOB01 }}
+          server: ${{ secrets.CDNET_BLOB01 }}
           ssh_private_key: ${{ secrets.CDNET_BLOB01_KEY }}
           sftp_only: true
           local_path: "./out/"
