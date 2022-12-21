@@ -17,7 +17,7 @@ jobs:
       - name: Make
         run: make
 
-      - name: Deploy font files
+      - name: Deploy files
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
@@ -25,5 +25,5 @@ jobs:
           server: ${{ secrets.CDNET_BLOB01 }}
           ssh_private_key: ${{ secrets.CDNET_BLOB01_KEY }}
           sftp_only: true
-          local_path: "./out/"
+          local_path: "./out"
           remote_path: "/1374ad54-0d58-42c3-aaa9-ef523652e19e/72294871-5af6-49a2-a359-bd2b81973847/"
