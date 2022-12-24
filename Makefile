@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: out/ytpmp.pages.dev/data.json out/sing.sakamata.ch/data.json
+all: out/ytpmp.pages.dev/data.json out/sing.sakamata.ch/data.json out/ytpmp.coyorilab.com/data.json
 
 out/ytpmp.pages.dev/data.json: ytpmp.pages.dev/items.yaml
 	cd ytpmp.pages.dev; \
@@ -15,3 +15,10 @@ out/sing.sakamata.ch/data.json: sing.sakamata.ch/items.yaml
 	python ../generator/main.py; \
 	mkdir -p ../out/sing.sakamata.ch/; \
 	cp out/*.json ../out/sing.sakamata.ch/
+
+out/ytpmp.coyorilab.com/data.json: ytpmp.coyorilab.com/items.yaml
+	cd ytpmp.coyorilab.com; \
+	mkdir out; \
+	python ../generator/main.py; \
+	mkdir -p ../out/ytpmp.coyorilab.com/; \
+	cp out/*.json ../out/ytpmp.coyorilab.com/
